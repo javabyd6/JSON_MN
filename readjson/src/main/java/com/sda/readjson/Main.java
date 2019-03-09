@@ -1,6 +1,8 @@
 package com.sda.readjson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sda.json.Person;
+import com.sda.json.Student;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,19 +18,19 @@ public class Main {
     static List<Person> listPersons = new ArrayList<>();
     static ObjectMapper mapper = new ObjectMapper();
 
-    public static  void readStudentList(String file){
-        try{
+    public static void readStudentList(String file) {
+        try {
 
-        Student[] personArray = mapper.readValue(new File(file), Student[].class);
-        listStudents = Arrays.asList(personArray);
+            Student[] personArray = mapper.readValue(new File(file), Student[].class);
+            listStudents = Arrays.asList(personArray);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    public static void readPersonList(String file){
-        try{
+    public static void readPersonList(String file) {
+        try {
 
             Person[] personArray = mapper.readValue(new File(file), Person[].class);
             listPersons = Arrays.asList(personArray);

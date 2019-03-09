@@ -1,7 +1,6 @@
 package com.sda.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sda.Person;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,8 +15,8 @@ import java.util.List;
  * Stworzyc liste typu Person i dodac do niej 4 obiekty Person
  * Zapisac liste do jsona  plik person.json
  * <p>
- * Stworzyc klase Student: name String, lastName String, address com.sda.Person.Address
- * Stworzyc klase com.sda.Person.Address: city String, street String
+ * Stworzyc klase Student: name String, lastName String, address com.sda.json.Person.Address
+ * Stworzyc klase com.sda.json.Person.Address: city String, street String
  * <p>
  * Stworzyc liste typu Student i dodac do niej 3 obiekty Student
  * Zapisac liste do jsona

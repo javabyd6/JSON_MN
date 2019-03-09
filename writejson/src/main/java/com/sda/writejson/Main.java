@@ -1,6 +1,9 @@
 package com.sda.writejson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sda.json.Address;
+import com.sda.json.Person;
+import com.sda.json.Student;
 
 import java.io.IOException;
 import java.nio.file.Files;
