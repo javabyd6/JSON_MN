@@ -1,6 +1,5 @@
 package com.sda.json;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sda.Person;
 
@@ -15,13 +14,13 @@ import java.util.List;
 /**
  * @author nieckarz
  * Stworzyc liste typu Person i dodac do niej 4 obiekty Person
- *  Zapisac liste do jsona  plik person.json
- *
- *  Stworzyc klase Student: name String, lastName String, address com.sda.Person.Address
- *  Stworzyc klase com.sda.Person.Address: city String, street String
- *
- *  Stworzyc liste typu Student i dodac do niej 3 obiekty Student
- *  Zapisac liste do jsona
+ * Zapisac liste do jsona  plik person.json
+ * <p>
+ * Stworzyc klase Student: name String, lastName String, address com.sda.Person.Address
+ * Stworzyc klase com.sda.Person.Address: city String, street String
+ * <p>
+ * Stworzyc liste typu Student i dodac do niej 3 obiekty Student
+ * Zapisac liste do jsona
  */
 public class Main {
 
@@ -78,15 +77,15 @@ public class Main {
             e.printStackTrace();
         }
 
-        Person osoba1 = new Person("A1","A2",20);
-        Person osoba2 = new Person("B1","B2",30);
+        Person osoba1 = new Person("A1", "A2", 20);
+        Person osoba2 = new Person("B1", "B2", 30);
 
         ObjectMapper mapper3 = new ObjectMapper();
         try {
             //zapis
             File personlistFileN = new File("listPersons");
-            List<Person> personListNew = Arrays.asList(osoba1,osoba2);
-            mapper2.writeValue(personlistFileN,personListNew);
+            List<Person> personListNew = Arrays.asList(osoba1, osoba2);
+            mapper2.writeValue(personlistFileN, personListNew);
 
             //odczyt
             Person[] personArray = mapper.readValue(personlistFileN, Person[].class);
