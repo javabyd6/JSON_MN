@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @author nieckarz
  */
-public class Main {
+public class WriteJsonClass {
 
     static List<Student> listStudents = new ArrayList<>();
     static List<Person> listPersons = new ArrayList<>();

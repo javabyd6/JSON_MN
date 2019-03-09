@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author nieckarz
  */
-public class Main {
+public class ReadJsonClass {
     static List<Student> listStudents = new ArrayList<>();
     static List<Person> listPersons = new ArrayList<>();
     static ObjectMapper mapper = new ObjectMapper();
