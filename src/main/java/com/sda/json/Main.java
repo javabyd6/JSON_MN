@@ -78,5 +78,24 @@ public class Main {
             e.printStackTrace();
         }
 
+        Person osoba1 = new Person("A1","A2",20);
+        Person osoba2 = new Person("B1","B2",30);
+
+        ObjectMapper mapper3 = new ObjectMapper();
+        try {
+            //zapis
+            File personlistFileN = new File("listPersons");
+            List<Person> personListNew = Arrays.asList(osoba1,osoba2);
+            mapper2.writeValue(personlistFileN,personListNew);
+
+            //odczyt
+            Person[] personArray = mapper.readValue(personlistFileN, Person[].class);
+            System.out.println(personArray[0].toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
